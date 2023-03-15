@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap');
+
+body {
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif !important;
+    height: 100vh;
+    width: 100%;
+
+    @media screen and (max-width: 600px) {
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .text-primary {
+        color: #6C63FF;
+    }
+
+    .mt-4 {
+        margin-top: 40px;
+    }
+
+    .mt-3 {
+        margin-top: 30px;
+    }
+
+    .mt-2 {
+        margin-top: 20px;
+    }
+
+    .mt-1 {
+        margin-top: 10px;
+    }
+
+    &.dark {
+        background: url('../images/darkBg.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .btn {
+        padding: 12px;
+        border-radius: 50px;
+        border: 2px solid #6C63FF;
+        background-color: #6C63FF;
+        color: #FFFFFF;
+        font-size: 1.1rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .form_holder {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .forms_main_box {
+            background: #FFFFFF;
+            width: 700px;
+            padding: 50px;
+            max-width: 700px;
+            margin: 20px;
+            border-radius: 20px;
+            max-height: 700px;
+
+            @media screen and (max-width: 600px) {
+                padding: 50px 25px;
+
+                @media screen and (max-width: 280px) {
+                    padding: 50px 15px;
+                }
+            }
+
+            .login_form {
+
+
+                .d-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2.5rem;
+
+                    @media screen and (max-width: 600px) {
+                        grid-template-columns: 1fr;
+
+                        .login_image_box {
+                            text-align: center;
+                            img {
+                                width: 50%;
+                            }
+                        }
+
+                        .login_form_field {
+                            h1 {
+                                &.mt-4 {
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+                    }
+
+                    .login_image_box {
+                        width: 100%;
+                    }
+
+                    .login_form_field {
+
+
+                        h1 {
+                            line-height: 0;
+                            font-weight: 800;
+                            font-size: 2.5rem;
+                        }
+
+                        .mt-3 {
+                            form {
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    .form-control {
+                                        padding: 12px;
+                                        border-radius: 50px;
+                                        border: 2px solid #6C63FF;
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
