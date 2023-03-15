@@ -38,12 +38,14 @@ body.dark {
 body .btn {
   padding: 12px;
   border-radius: 50px;
-  border: 2px solid #6C63FF;
-  background-color: #6C63FF;
-  color: #FFFFFF;
   font-size: 1.1rem;
   width: 100%;
   cursor: pointer;
+}
+body .btn.btn-primary {
+  border: 2px solid #6C63FF;
+  background-color: #6C63FF;
+  color: #FFFFFF;
 }
 body .form_holder {
   height: 100%;
