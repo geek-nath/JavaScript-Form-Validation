@@ -26,19 +26,29 @@ submitButton.addEventListener('click', (e)=> {
     else if((userName === userDetails.username) && (password !== userDetails.password)) {
         console.log('Incorrect password');
         errorMessage.classList.add('text-danger');
+        errorMessage.classList.remove('text-success');
         errorMessage.innerHTML = "Incorrect password"
     } 
     
     else if((password === userDetails.password) && (userName !== userDetails.username)) {
         console.log('Username not found');
         errorMessage.classList.add('text-danger');
+        errorMessage.classList.remove('text-success');
         errorMessage.innerHTML = "Username not found"
     }
 
     else if((userName.length === 0) && (password.length === 0)) {
         console.log('Please enter your login details');
         errorMessage.classList.add('text-danger');
+        errorMessage.classList.remove('text-success');
         errorMessage.innerHTML = "Please enter your login details."
+    } 
+
+    else if((userName !== userDetails.username) && (password !== userDetails.password)) {
+        console.log('Username / Password incorrect');
+        errorMessage.classList.add('text-danger');
+        errorMessage.classList.remove('text-success');
+        errorMessage.innerHTML = "Please enter the correct login details."
     }
 });
 
