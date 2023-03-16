@@ -17,6 +17,9 @@ body {
 body .text-primary {
   color: #6C63FF;
 }
+body .ms-1 {
+  margin-left: 10px;
+}
 body .mt-4 {
   margin-top: 40px;
 }
@@ -62,7 +65,7 @@ body .text-warning {
 }
 body .d-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
   width: 100%;
 }
 body .form_holder {

@@ -18,6 +18,10 @@ body {
         color: #6C63FF;
     }
 
+    .ms-1 {
+        margin-left: 10px;
+    }
+
     .mt-4 {
         margin-top: 40px;
     }
@@ -74,7 +78,7 @@ body {
 
     .d-flex {
         display: flex;
-        flex-direction: row;
+        flex-direction: row !important;
         width: 100%;
     }
 

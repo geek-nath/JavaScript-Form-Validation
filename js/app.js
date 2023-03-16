@@ -49,5 +49,23 @@ const showPasswordToggle = document.getElementById('showPasswordToggle');
 showPasswordToggle.addEventListener('click', ()=> {
     const password = document.getElementById('password');
 
-    
+    if(password.type === 'password') {
+        password.type = 'text';
+        showPasswordToggle.innerHTML = 'Hide password';
+    } else {
+        password.type = 'password';
+        showPasswordToggle.innerHTML = 'Show password';
+    }
+});
+
+// auto fill log in details
+
+const autoFillToggleButton = document.getElementById('autoFillDetails');
+
+autoFillToggleButton.addEventListener('click', ()=> {
+    const password = document.getElementById('password');
+    const username = document.getElementById('username');
+
+    password.value = userDetails.password;
+    username.value = userDetails.username;
 });
