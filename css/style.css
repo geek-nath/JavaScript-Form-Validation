@@ -41,11 +41,29 @@ body .btn {
   font-size: 1.1rem;
   width: 100%;
   cursor: pointer;
+  outline: none;
 }
 body .btn.btn-primary {
   border: 2px solid #6C63FF;
   background-color: #6C63FF;
   color: #FFFFFF;
+}
+body .text-center {
+  text-align: center;
+}
+body .text-danger {
+  color: #e01d1d;
+}
+body .text-success {
+  color: #12df12;
+}
+body .text-warning {
+  color: #979713;
+}
+body .d-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 body .form_holder {
   height: 100%;
@@ -100,11 +118,11 @@ body .form_holder .forms_main_box .login_form .d-grid .login_form_field h1 {
   font-weight: 800;
   font-size: 2.5rem;
 }
-body .form_holder .forms_main_box .login_form .d-grid .login_form_field .mt-3 form div {
+body .form_holder .forms_main_box .login_form .d-grid .login_form_field .mt-2 form div {
   display: flex;
   flex-direction: column;
 }
-body .form_holder .forms_main_box .login_form .d-grid .login_form_field .mt-3 form div .form-control {
+body .form_holder .forms_main_box .login_form .d-grid .login_form_field .mt-2 form div .form-control {
   padding: 12px;
   border-radius: 50px;
   border: 2px solid #6C63FF;

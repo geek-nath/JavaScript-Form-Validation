@@ -47,12 +47,35 @@ body {
         font-size: 1.1rem;
         width: 100%;
         cursor: pointer;
+        outline: none;
 
         &.btn-primary {
             border: 2px solid #6C63FF;
             background-color: #6C63FF;
             color: #FFFFFF;
         }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-danger {
+        color: #e01d1d;
+    }
+
+    .text-success {
+        color: #12df12;
+    }
+
+    .text-warning {
+        color: #979713;
+    }
+
+    .d-flex {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 
     .form_holder {
@@ -119,7 +142,7 @@ body {
                             font-size: 2.5rem;
                         }
 
-                        .mt-3 {
+                        .mt-2 {
                             form {
                                 div {
                                     display: flex;

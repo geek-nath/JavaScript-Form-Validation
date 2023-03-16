@@ -23,9 +23,11 @@
 
                         <div class="login_form_field">
                             <h1 class="text-primary mt-4">Log In</h1>
-                            <small class="text-muted">Don't have an account? <a href="#" class="text-primary">Sign Up</a></small>
+                            <small>Don't have an account? <a href="#" class="text-primary">Sign Up</a></small>
 
-                            <div class="mt-3">
+                            <div class="mt-2">
+                                <div class="text-center error_message" id="errorMessage"></div>
+
                                 <form action="" id="logInFrom">
                                     <div>
                                         <label for="username">Username</label>
@@ -35,6 +37,9 @@
                                     <div class="mt-1">
                                         <label for="password">Password</label>
                                         <input type="password" class="form-control" required name="password" id="password">
+                                        <div class="mt-1">
+                                            <a href="#" class="text-primary" id="showPasswordToggle">Show password</a>
+                                        </div>
                                     </div>
 
                                     <div class="mt-2">
