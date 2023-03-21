@@ -111,3 +111,60 @@ logInToggle.addEventListener('click', ()=> {
         signUpFormBox.classList.add('d-none');
     }
 });
+
+// sign up form validation
+
+const signUpButton = document.getElementById('signUpSubmitButton');
+const signUpErrorMessage = document.getElementById('signUpErrorMessage');
+
+signUpButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+
+    const emailAddress = document.getElementById('emailAddress').value;
+    const signUpPassword = document.getElementById('signUpPassword').value;
+    const signUpConfirmPassword = document.getElementById('signUpConfirmPassword').value;
+
+    if(emailAddress.indexOf('@') === -1 ) {
+        console.log('email must conatain @')
+        signUpErrorMessage.innerHTML = 'email address must contain @';
+        signUpErrorMessage.classList.add('text-danger');
+        signUpErrorMessage.classList.remove('text-success');
+    } else {
+        console.log('Correct email');
+    }
+
+    if(signUpPassword !== signUpConfirmPassword) {
+        console.log('password confirmation does not match your password');
+        signUpErrorMessage.innerHTML = 'password confirmation does not match your password';
+        signUpErrorMessage.classList.add('text-danger');
+        signUpErrorMessage.classList.remove('text-success');
+    } else {
+        console.log('account created successfully');
+    }
+
+    if(emailAddress.indexOf('@') > -1 && (signUpPassword === signUpConfirmPassword)) {
+        console.log('Your account has been created successfully')
+        signUpErrorMessage.innerHTML = 'Your account has been created successfully';
+        signUpErrorMessage.classList.add('text-success');
+        signUpErrorMessage.classList.remove('d-none');
+    }
+});
+
+// show password toggle for signUp form
+
+const signUpShowPasswordToggle = document.getElementById('signUpShowPasswordToggle');
+
+signUpShowPasswordToggle.addEventListener('click', ()=> {
+    const signUpPassword = document.getElementById('signUpPassword');
+    const signUpConfirmPassword = document.getElementById('signUpConfirmPassword');
+
+    if((signUpPassword && signUpConfirmPassword).type === 'password') {
+        signUpPassword.type = 'text';
+        signUpConfirmPassword.type = 'text';
+        signUpShowPasswordToggle.innerHTML = 'Hide password';
+    } else {
+        signUpPassword.type = 'password';
+        signUpConfirmPassword.type = 'password';
+        signUpShowPasswordToggle.innerHTML = 'Show password';
+    }
+});
