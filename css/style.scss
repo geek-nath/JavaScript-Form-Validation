@@ -45,6 +45,10 @@ body {
         background-repeat: no-repeat;
     }
 
+    .d-none {
+        display: none;
+    }
+
     .btn {
         padding: 12px;
         border-radius: 50px;
@@ -90,7 +94,7 @@ body {
         align-items: center;
 
         .forms_main_box {
-            background: #FFFFFF;
+            background-color: #FFFFFF;
             width: 700px;
             padding: 50px;
             max-width: 700px;
@@ -107,6 +111,67 @@ body {
             }
 
             .login_form {
+
+
+                .d-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2.5rem;
+
+                    @media screen and (max-width: 600px) {
+                        grid-template-columns: 1fr;
+
+                        .login_image_box {
+                            text-align: center;
+                            img {
+                                width: 50%;
+                            }
+                        }
+
+                        .login_form_field {
+                            h1 {
+                                &.mt-4 {
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+                    }
+
+                    .login_image_box {
+                        width: 100%;
+                    }
+
+                    .login_form_field {
+
+
+                        h1 {
+                            line-height: 0;
+                            font-weight: 800;
+                            font-size: 2.5rem;
+                        }
+
+                        .mt-2 {
+                            form {
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    .form-control {
+                                        padding: 12px;
+                                        border-radius: 50px;
+                                        border: 2px solid #6C63FF;
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // sign up form
+
+            .signup_form {
 
 
                 .d-grid {

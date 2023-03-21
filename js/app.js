@@ -79,3 +79,35 @@ autoFillToggleButton.addEventListener('click', ()=> {
     password.value = userDetails.password;
     username.value = userDetails.username;
 });
+
+// sign up form shows on sign up click
+
+const signUpToggle = document.getElementById('signUpToggle');
+
+signUpToggle.addEventListener('click', ()=> {
+    const logInFormBox = document.getElementById('logInFormBox');
+    const signUpFormBox  = document.getElementById('signUpFormBox');
+
+    if(signUpFormBox.classList.contains('d-none')) {
+        // console.log('test one passed')
+
+        logInFormBox.classList.add('d-none');
+        signUpFormBox.classList.remove('d-none');
+    }
+});
+
+// log in toggle button function
+
+const logInToggle = document.getElementById('loginToggle');
+
+logInToggle.addEventListener('click', ()=> {
+    const logInFormBox = document.getElementById('logInFormBox');
+    const signUpFormBox  = document.getElementById('signUpFormBox');
+
+    if(logInFormBox.classList.contains('d-none')) {
+        // console.log('test one passed')
+
+        logInFormBox.classList.remove('d-none');
+        signUpFormBox.classList.add('d-none');
+    }
+});
